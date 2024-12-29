@@ -1,0 +1,28 @@
+# 开发环境配置
+server:
+  port: 8080
+
+# 对象存储
+# todo 需替换配置 腾讯对象存储
+cos:
+  client:
+    accessKey: "accessKey" # SecretId
+    secretKey: "secretKey"  # SecretKey
+    region: "region" # 地域名
+    bucket: "bucket" # 存储桶名称
+
+minio:
+  endpoint: "服务器IP+端口"
+  accessKey: "accessKey"
+  secretKey: "secretKey"
+  bucketName: "bucketName"
+  readPath: "readPath"
+
+# 绝对路径
+local:
+  path: "本地路径 + /file/images/"
+  get_image: "http://localhost:${server.port}/storage/common/v1/getImage?filename="
+
+system:
+  cos_host: "腾讯对象云存储前缀"
+  storage_strategy: "local" # 图床配置
